@@ -130,6 +130,7 @@
                 .on('focusout.mask', function() {
                     if (options.clearIfNotMatch && !regexMask.test(p.val())) {
                        p.val('');
+                       el.triggerHandler('change');
                    }
                 });
             },
